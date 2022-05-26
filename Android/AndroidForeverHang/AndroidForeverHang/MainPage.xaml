@@ -7,7 +7,9 @@
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
-        <Button Clicked="Button_Clicked"></Button>
+        <Label x:Name="StatusLabel"></Label>
+        <Button x:Name="ConnectButton" Clicked="ConnectButton_Clicked" Text="Connect"/>
+        <Button x:Name="DisconnectButton" IsEnabled="False" Clicked="DisconnectButton_Clicked" Text="Disconnect"/>
     </StackLayout>
 
 </ContentPage>
