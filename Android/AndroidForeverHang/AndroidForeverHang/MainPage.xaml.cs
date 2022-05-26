@@ -94,7 +94,7 @@ namespace AndroidForeverHang
             {
                 UpdateStatus(Status.Connecting);
 
-                _tokenSource = new CancellationTokenSource();
+                _tokenSource = new CancellationTokenSource(TimeSpan.FromSeconds(5)); 
 
                 CancellationToken token = _tokenSource.Token;
                 _socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
